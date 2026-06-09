@@ -1,0 +1,346 @@
+/* code for all - start */
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+/* code for all - end */
+
+
+
+/* custom properties - start */
+:root {
+     /* navigation */
+     --nav-color: white;
+     --nav-hover-color: #f8f8f8;
+}
+
+/* custom properties - end */
+
+
+
+.attributions {
+     font-size: 0.5rem;
+}
+
+
+
+/* code for navbar - start */
+
+@media all {
+     nav {
+          position: fixed;
+          width: 100vw;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          min-height: 60px;
+          background-color: var(--nav-color);
+          box-shadow: 2px 2px 10px grey;
+     }
+
+     .nav__logo img {
+          height: 40px;
+          text-decoration: none;
+          cursor: pointer;
+     }
+
+
+
+     .nav__list__item__btn {
+          letter-spacing: 1px;
+     }
+}
+
+/* code for mobile */
+@media (pointer: fine) and (max-width: 999px),
+(pointer: coarse) {
+     .logo-mobile {
+          display: flex;
+     }
+
+     .nav__logo-desktop {
+          display: none;
+     }
+
+     .nav__main {
+          position: fixed;
+          width: 100vw;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 5px 10px;
+          min-height: 60px;
+     }
+
+     .hamburger {
+          cursor: pointer;
+          padding: 10px;
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+     }
+
+     .bars {
+          background-color: black;
+          width: 36px;
+          height: 5px;
+          border-radius: 10px;
+     }
+
+     /* code for overlay */
+     .overlay {
+          height: 0;
+          width: 100vw;
+          position: fixed;
+          z-index: 2;
+          left: 0;
+          top: 0;
+          background-color: rgba(0, 0, 0, 0.9);
+          overflow-x: hidden;
+          transition: 0.5s;
+     }
+
+     .nav__list {
+          position: relative;
+          top: 0px;
+          width: 100%;
+          text-align: center;
+          margin-top: px;
+     }
+
+     .overlay a {
+          padding: 8px;
+          text-decoration: none;
+          font-size: 1.2rem;
+          color: #818181;
+          display: block;
+          transition: 0.3s;
+
+     }
+
+     .overlay {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+     }
+
+     .overlay .close-btn {
+          color: lavender;
+          margin: 0px 20px;
+          align-self: flex-end;
+          font-size: 60px;
+          width: fit-content;
+     }
+
+     .overlay a:hover {
+          color: lightgrey;
+     }
+
+     .nav__list {
+          padding-bottom: 100px;
+     }
+
+     .nav__list__item__btn {
+          background-color: transparent;
+          color: lavender;
+          font-size: 1.4rem;
+          text-decoration: underline;
+          border: none;
+     }
+
+     .nav__list__item__dropdown__item img {
+          width: 30px;
+     }
+}
+
+/* code for desktop */
+@media (pointer: fine) and (min-width: 1000px) {
+     .logo-mobile {
+          display: none;
+     }
+
+
+
+     .nav__main,
+     .overlay {
+          display: flex;
+          width: fit-content;
+          align-items: center;
+     }
+
+     .nav__list {
+          display: flex;
+          justify-content: space-evenly;
+          width: 70vw;
+     }
+
+     .nav__list__item {
+          position: relative;
+          display: flex;
+          width: fit-content;
+     }
+
+     .nav__list__item__btn {
+          background-color: var(--nav-color);
+     }
+
+     .nav__list__item__dropdown {
+          display: none;
+          top: 50px;
+          position: absolute;
+          min-width: 150px;
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          background-color: var(--nav-color);
+          z-index: 1;
+     }
+
+     .nav__list__item__dropdown__item {
+          color: black;
+          height: 50px;
+          padding: 0 5px;
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          letter-spacing: 1.2px;
+     }
+
+     .nav__list__item__dropdown__item img {
+          width: 30px;
+     }
+
+     .nav__list__item__dropdown__item__secondary {
+          text-align: center;
+     }
+
+     .nav__list__item__btn {
+          color: black;
+          padding: 1rem 8px;
+          font-size: 1rem;
+          border: none;
+     }
+
+
+     .nav__list__item__dropdown a:hover {
+          background-color: var(--nav-hover-color);
+     }
+
+     .nav__list__item:hover .nav__list__item__dropdown {
+          display: flex;
+          flex-direction: column;
+     }
+
+     .nav__list__item__dropdown__item__secondary {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+     }
+
+     .nav__list__item__dropdown__verticle {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          justify-content: space-evenly;
+     }
+
+     .close-btn {
+          display: none;
+     }
+}
+
+@media (pointer: fine) and (min-width: 1000px) {
+     .nav__list {
+          min-width: 800px;
+     }
+
+     .nav__logo {
+          font-size: 1.4rem;
+     }
+
+     .nav__list__item__btn {
+          letter-spacing: 2px;
+     }
+}
+
+@media (pointer: fine) and (min-width: 1400px) {
+     .nav__list {
+          min-width: 1200px;
+     }
+
+     .nav__logo {
+          font-size: 1.6rem;
+     }
+
+     .nav__list__item__btn {
+          letter-spacing: 3px;
+     }
+
+}
+
+@media (pointer: fine) and (min-width: 1800px) {
+     .nav__list {
+          min-width: 1600px;
+     }
+
+     .nav__logo {
+          font-size: 1.8rem;
+     }
+
+     .nav__list__item__btn {
+          font-size: 1.1rem;
+     }
+}
+
+@media (pointer: fine) and (min-width: 2200px) {
+     .nav__list {
+          min-width: 2000px;
+     }
+
+     .nav__logo {
+          font-size: 2rem;
+     }
+
+     .nav__list__item__btn {
+          font-size: 1.2rem;
+     }
+}
+
+@media (pointer: fine) and (min-width: 2600px) {
+     .nav__list {
+          min-width: 2400px;
+     }
+
+     .nav__logo {
+          font-size: 2.2rem;
+     }
+
+     .nav__list__item__btn {
+          font-size: 1.3rem;
+     }
+}
+
+@media (pointer: fine) and (min-width: 3000px) {
+     .nav__list {
+          min-width: 2800px;
+     }
+
+     .nav__logo {
+          font-size: 2.4rem;
+     }
+
+     .nav__list__item__btn {
+          font-size: 1.6rem;
+     }
+}
+
+/* code for navbar - end */
+
+
+
+/* code for footer - start */
+
+@media all {}
+
+/* code for footer - end */
